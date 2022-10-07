@@ -20,6 +20,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -111,7 +117,7 @@ img {
   align-items: center;
   justify-content: center;
   padding: 80px;
-  margin-top: 40px;
+  height: 100%;
 }
 
 .how-work__title {
@@ -161,20 +167,19 @@ img {
 }
 
 .treatments__gallery {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 70%;
+  display: grid;
+  width: 90%;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))
 }
 
 .treatments__item {
+  grid-column: span 2;
   align-items: center;
   border-radius: 15px;
   display: flex;
-  height: 250px;
   justify-content: center;
   margin: 20px;
-  width: 400px;
   box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -183,6 +188,7 @@ img {
   flex-direction: column;
   align-items: center;
   width: 85%;
+  height: 200px;
 }
 
 .treatments__item figcaption {
@@ -191,7 +197,7 @@ img {
 
 .treatments__img {
   width: 100%;
-  height: 170px;
+  height: 100%;
   object-fit: cover;
   border-radius: 15px;
 }
@@ -236,7 +242,7 @@ img {
 
 .therapies__card:hover {
   transform: scale(1.1);
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .therapies__img {
@@ -266,7 +272,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 0;
+  padding: 65px 0;
 }
 
 .form {
@@ -300,6 +306,7 @@ img {
 }
 
 /* footer */
+
 .footer__container {
   display: flex;
   justify-content: center;
